@@ -1,0 +1,8 @@
+s=str(input())
+from itertools import groupby
+a=sorted(s)
+groupby(a)
+for keys,group in groupby(s):
+    k=len(list(group))
+      
+    print((tuple([k,int(keys)])),end= " ")
