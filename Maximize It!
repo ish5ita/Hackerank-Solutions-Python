@@ -1,0 +1,14 @@
+m,n=map(int,input().split())
+from itertools import product
+l=[]
+for _ in range(m):
+    l.append(list(map(int,input().split()))[1:])
+ 
+#print(list(product(l))) 
+
+result = 0
+
+for i in product(*l):
+    result = max(sum([x * x for x in i]) % n, result)
+print(result)
+
